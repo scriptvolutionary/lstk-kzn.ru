@@ -16,17 +16,29 @@ export default function Container({ children }: ContainerProps): JSX.Element {
 				<input id='my-drawer-4' type='checkbox' className='drawer-toggle' />
 				<div className='drawer-content'>
 					<div className='w-full bg-base-100 text-base-content'>
-						<div className='block w-screen bg-primary text-primary-content'>
+						<div className='hidden w-screen bg-primary text-primary-content sm:block'>
 							<div className='container mx-auto flex h-[5vh] items-center justify-between'>
 								<div className='flex w-full items-center justify-between'>
-									<UnderlineModal modalKey='location' variant='primary' icon={<FaLocationArrow />}>
-										Казань
+									<UnderlineModal className='sm:text-sm md:text-base' modalKey='location' variant='primary' icon={<FaLocationArrow />}>
+										г. Казань
 									</UnderlineModal>
-									<div className='flex items-center gap-8'>
-										<UnderlineLink href='tel:+7 (909) 306-77-79' variant='primary' icon={<FaPhone />} newTab={false}>
+									<div className='flex items-center sm:gap-4 md:gap-8'>
+										<UnderlineLink
+											className='sm:text-sm md:text-base'
+											href='tel:+7 (909) 306-77-79'
+											variant='primary'
+											icon={<FaPhone />}
+											newTab={false}
+										>
 											+7 (909) 306-77-79
 										</UnderlineLink>
-										<UnderlineLink href='mailto:lstk-kzn@mail.ru' variant='primary' icon={<FaEnvelope />} newTab={false}>
+										<UnderlineLink
+											className='sm:text-sm md:text-base'
+											href='mailto:lstk-kzn@mail.ru'
+											variant='primary'
+											icon={<FaEnvelope />}
+											newTab={false}
+										>
 											lstk-kzn@mail.ru
 										</UnderlineLink>
 									</div>

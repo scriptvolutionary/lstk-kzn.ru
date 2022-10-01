@@ -2,9 +2,9 @@ module.exports = {
 	content: ['./src/**/*.{js,tsx,ts,jsx}'],
 	theme: {
 		screens: {
-			xs: '320px',
-			sm: '640px',
-			md: '768px',
+			xs: '352px',
+			sm: '480px',
+			md: '640px',
 			lg: '1024px',
 			xl: '1280px'
 		},
@@ -931,7 +931,7 @@ module.exports = {
 					// eslint-disable-next-line @typescript-eslint/no-var-requires
 					...require('daisyui/src/colors/themes')['[data-theme=corporate]'],
 					primary: '#3B6BAB',
-					secondary: '#01BCF9',
+					secondary: '#01BCF9'
 				}
 			}
 		],

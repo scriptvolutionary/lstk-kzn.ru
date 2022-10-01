@@ -69,7 +69,7 @@ const UnderlineModal = ({ children, className, variant, icon, distance = 'min', 
 						'hover:border-neutral-content/0 focus-visible:ring-neutral-content'
 					]
 				],
-				[distance === 'min' && 'gap-4', distance === 'max' && 'justify-between'],
+				[distance === 'min' && 'sm:gap-2 md:gap-4', distance === 'max' && 'justify-between'],
 				[direction === 'row' && 'flex-row', direction === 'reverse' && 'flex-row-reverse'],
 				'transition-all duration-200 ease-in',
 				className
