@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+	.underline-base {
+		background-image: linear-gradient(#33333300, #33333300), linear-gradient(to right, hsl(var(--p)), hsl(var(--p)));
+		background-size: 100% 2px, 0 2px;
+		background-position: 100% 100%, 0 100%;
+		background-repeat: no-repeat;
+	}
+	.underline-base-content {
+		background-image: linear-gradient(#33333300, #33333300), linear-gradient(to right, hsl(var(--bc)), hsl(var(--bc)));
+		background-size: 100% 2px, 0 2px;
+		background-position: 100% 100%, 0 100%;
+		background-repeat: no-repeat;
+	}
+	.underline-primary-content {
+		background-image: linear-gradient(#33333300, #33333300), linear-gradient(to right, hsl(var(--pc)), hsl(var(--pc)));
+		background-size: 100% 2px, 0 2px;
+		background-position: 100% 100%, 0 100%;
+		background-repeat: no-repeat;
+	}
+	.underline-secondary-content {
+		background-image: linear-gradient(#33333300, #33333300), linear-gradient(to right, hsl(var(--sc)), hsl(var(--sc)));
+		background-size: 100% 2px, 0 2px;
+		background-position: 100% 100%, 0 100%;
+		background-repeat: no-repeat;
+	}
+	.underline-accent-content {
+		background-image: linear-gradient(#33333300, #33333300), linear-gradient(to right, hsl(var(--ac)), hsl(var(--ac)));
+		background-size: 100% 2px, 0 2px;
+		background-position: 100% 100%, 0 100%;
+		background-repeat: no-repeat;
+	}
+	.underline-info-content {
+		background-image: linear-gradient(#33333300, #33333300), linear-gradient(to right, hsl(var(--inc)), hsl(var(--inc)));
+		background-size: 100% 2px, 0 2px;
+		background-position: 100% 100%, 0 100%;
+		background-repeat: no-repeat;
+	}
+	.underline-warning-content {
+		background-image: linear-gradient(#33333300, #33333300), linear-gradient(to right, hsl(var(--wac)), hsl(var(--wac)));
+		background-size: 100% 2px, 0 2px;
+		background-position: 100% 100%, 0 100%;
+		background-repeat: no-repeat;
+	}
+	.underline-error-content {
+		background-image: linear-gradient(#33333300, #33333300), linear-gradient(to right, hsl(var(--erc)), hsl(var(--erc)));
+		background-size: 100% 2px, 0 2px;
+		background-position: 100% 100%, 0 100%;
+		background-repeat: no-repeat;
+	}
+	.underline-neutral-content {
+		background-image: linear-gradient(#33333300, #33333300), linear-gradient(to right, hsl(var(--nc)), hsl(var(--nc)));
+		background-size: 100% 2px, 0 2px;
+		background-position: 100% 100%, 0 100%;
+		background-repeat: no-repeat;
+	}
+
+	.underline-base:hover,
+	.underline-base-content:hover,
+	.underline-primary-content:hover,
+	.underline-secondary-content:hover,
+	.underline-accent-content:hover,
+	.underline-info-content:hover,
+	.underline-warning-content:hover,
+	.underline-error-content:hover,
+	.underline-neutral-content:hover {
+		background-size: 0 2px, 100% 2px;
+	}
+}
