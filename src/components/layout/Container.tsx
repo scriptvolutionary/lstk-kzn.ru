@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import { FaEnvelope, FaLocationArrow, FaPhone } from 'react-icons/fa'
 
+import { Img } from '../Img'
 import UnderlineLink from '../links/UnderlineLink'
 import UnderlineModal from '../modals/UnderlineModal'
 
@@ -34,7 +35,9 @@ export default function Container({ children }: ContainerProps): JSX.Element {
 						</div>
 						<header className='sticky top-0 w-screen bg-base-100 text-base-content'>
 							<div className='container mx-auto flex h-[8vh] items-center justify-between'>
-								<div className='flex w-full items-center justify-between'>logo</div>
+								<div className='flex w-full items-center justify-between'>
+									<Img width={100} height={50} src='/emblem.png' alt='Эмблема' />
+								</div>
 							</div>
 						</header>
 					</div>

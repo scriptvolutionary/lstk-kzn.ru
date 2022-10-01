@@ -344,22 +344,7 @@ module.exports = {
 			DEFAULT: '1'
 		},
 		fontFamily: {
-			sans: [
-				'ui-sans-serif',
-				'system-ui',
-				'-apple-system',
-				'BlinkMacSystemFont',
-				'"Segoe UI"',
-				'Roboto',
-				'"Helvetica Neue"',
-				'Arial',
-				'"Noto Sans"',
-				'sans-serif',
-				'"Apple Color Emoji"',
-				'"Segoe UI Emoji"',
-				'"Segoe UI Symbol"',
-				'"Noto Color Emoji"'
-			],
+			sans: ['"Noto Sans"', 'sans-serif'],
 			serif: ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
 			mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace']
 		},
@@ -939,6 +924,22 @@ module.exports = {
 	],
 	plugins: [require('@tailwindcss/forms'), require('daisyui')],
 	daisyui: {
-		darkTheme: 'corporate'
+		styled: true,
+		themes: [
+			{
+				SLGTheme: {
+					// eslint-disable-next-line @typescript-eslint/no-var-requires
+					...require('daisyui/src/colors/themes')['[data-theme=corporate]'],
+					primary: '#3B6BAB',
+					secondary: '#01BCF9',
+				}
+			}
+		],
+		base: true,
+		utils: true,
+		logs: true,
+		rtl: false,
+		prefix: '',
+		darkTheme: 'SLGTheme'
 	}
 }
