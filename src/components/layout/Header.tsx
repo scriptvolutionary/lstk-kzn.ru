@@ -62,7 +62,7 @@ export default function Header(): JSX.Element {
 					</div>
 				</div>
 			</div>
-			<header className='sticky top-0 left-0 z-[1000] h-max w-screen border-b bg-base-100 text-base-content'>
+			<header className='sticky overflow-x-hidden top-0 left-0 z-[1000] h-max w-screen border-b bg-base-100 text-base-content'>
 				<div className='container mx-auto flex h-[8vh] items-center justify-between'>
 					<div className='flex w-full items-center justify-between'>
 						<Img className='h-8 w-16 lg:h-12 lg:w-24' width={512} height={256} src='/emblem.png' alt='Эмблема' />
