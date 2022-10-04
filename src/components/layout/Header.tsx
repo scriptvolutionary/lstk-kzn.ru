@@ -46,22 +46,15 @@ export default function Header(): JSX.Element {
 
 	return (
 		<div className='block h-max w-screen bg-base-100 text-base-content'>
-			<div className='hidden w-screen bg-primary text-primary-content sm:block'>
+			<div className='hidden w-full bg-primary text-primary-content sm:block'>
 				<div className='container mx-auto flex h-[5vh] items-center justify-between'>
 					<div className='flex w-full items-center justify-between'>
-						<UnderlineModal className='sm:text-sm md:text-base' modalKey='location' variant='primary' icon={<FaLocationArrow />}>
+						<UnderlineModal className='text-sm lg:text-base' modalKey='location' variant='primary' icon={<FaLocationArrow />}>
 							г. Казань
 						</UnderlineModal>
 						<div className='flex items-center sm:gap-4 md:gap-8'>
 							{contactLinks?.map(l => (
-								<UnderlineLink
-									className='sm:text-sm md:text-base'
-									href={l?.href}
-									variant='primary'
-									icon={l?.icon}
-									newTab={false}
-									key={l?.label}
-								>
+								<UnderlineLink className='text-sm lg:text-base' href={l?.href} variant='primary' icon={l?.icon} newTab={false} key={l?.label}>
 									{l?.label}
 								</UnderlineLink>
 							))}
@@ -69,17 +62,17 @@ export default function Header(): JSX.Element {
 					</div>
 				</div>
 			</div>
-			<header className='sticky top-0 w-screen bg-base-100 text-base-content shadow'>
+			<header className='sticky top-0 h-max w-full border-b bg-base-100 text-base-content'>
 				<div className='container mx-auto flex h-[8vh] items-center justify-between'>
 					<div className='flex w-full items-center justify-between'>
-						<Img width={100} height={50} src='/emblem.png' alt='Эмблема' />
+						<Img className='h-8 w-16 lg:h-12 lg:w-24' width={512} height={256} src='/emblem.png' alt='Эмблема' />
 						{headerLinks?.map(l =>
 							!l?.content ? (
 								<PrimaryLink
 									className={
 										router.asPath === l?.href
-											? 'hidden font-semibold uppercase text-primary hover:text-primary-focus md:inline-flex'
-											: 'hidden font-semibold uppercase text-base-content hover:text-primary md:inline-flex'
+											? 'hidden text-sm font-semibold uppercase text-primary hover:text-primary-focus md:inline-flex lg:text-base'
+											: 'hidden text-sm font-semibold uppercase text-base-content hover:text-primary md:inline-flex lg:text-base'
 									}
 									href={l?.href}
 									key={l?.label}
@@ -92,21 +85,21 @@ export default function Header(): JSX.Element {
 										<PrimaryLink
 											className={
 												router.asPath === l?.href
-													? 'hidden font-semibold uppercase text-primary hover:text-primary-focus md:inline-flex'
-													: 'hidden font-semibold uppercase text-base-content hover:text-primary md:inline-flex'
+													? 'hidden text-sm font-semibold uppercase text-primary hover:text-primary-focus md:inline-flex lg:text-base'
+													: 'hidden text-sm font-semibold uppercase text-base-content hover:text-primary md:inline-flex lg:text-base'
 											}
 											href={l?.href}
 										>
 											{l?.label}
 										</PrimaryLink>
 									</label>
-									<div className='dropdown-content w-72 bg-base-100 pt-[26px] shadow' tabIndex={0}>
+									<div className='dropdown-content w-72 border-b bg-base-100 pt-[26px]' tabIndex={0}>
 										{l?.content?.map(c => (
 											<ArrowButtonLink
 												className={
 													router.asPath !== c?.href
-														? 'font-medium normal-case'
-														: 'cursor-not-allowed select-none font-medium normal-case'
+														? 'btn-sm font-medium normal-case lg:btn-md'
+														: 'btn-sm cursor-not-allowed select-none font-medium normal-case lg:btn-md'
 												}
 												variant={router.asPath !== c?.href ? 'ghost' : 'primary'}
 												size='block'

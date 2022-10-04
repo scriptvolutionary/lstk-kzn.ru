@@ -71,13 +71,13 @@ export default function Container({ children }: ContainerProps): JSX.Element {
 					<div className='absolute bottom-4 right-0 w-full'>
 						<div className='flex flex-col items-center justify-center gap-4 px-4'>
 							<div className='flex items-center gap-4'>
-								<ButtonLink href='/' variant='ghost'>
+								<ButtonLink className='btn-sm' href='/' variant='outline'>
 									<FaLocationArrow />
 								</ButtonLink>
-								<ButtonLink href='/' variant='ghost'>
+								<ButtonLink className='btn-sm' href='tel:+7 (909) 306-77-79' variant='outline' newTab={false}>
 									<FaPhone />
 								</ButtonLink>
-								<ButtonLink href='/' variant='ghost'>
+								<ButtonLink className='btn-sm' href='mailto:lstk-kzn@mail.ru' variant='outline' newTab={false}>
 									<FaEnvelope />
 								</ButtonLink>
 							</div>
