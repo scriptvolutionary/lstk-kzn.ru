@@ -10,6 +10,7 @@ module.exports = {
 	extends: ['eslint:recommended', 'next', 'next/core-web-vitals', 'plugin:@typescript-eslint/recommended', 'prettier'],
 
 	rules: {
+		'@next/next/no-img-element': 'off',
 		'no-unused-vars': 'off',
 		'no-console': 'warn',
 		'@typescript-eslint/explicit-module-boundary-types': 'off',

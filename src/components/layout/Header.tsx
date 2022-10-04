@@ -45,8 +45,8 @@ export default function Header(): JSX.Element {
 	const router: NextRouter = useRouter()
 
 	return (
-		<div className='block h-max w-screen bg-base-100 text-base-content'>
-			<div className='hidden w-full bg-primary text-primary-content sm:block'>
+		<>
+			<div className='hidden w-screen bg-primary text-primary-content sm:block'>
 				<div className='container mx-auto flex h-[5vh] items-center justify-between'>
 					<div className='flex w-full items-center justify-between'>
 						<UnderlineModal className='text-sm lg:text-base' modalKey='location' variant='primary' icon={<FaLocationArrow />}>
@@ -62,7 +62,7 @@ export default function Header(): JSX.Element {
 					</div>
 				</div>
 			</div>
-			<header className='sticky top-0 h-max w-full border-b bg-base-100 text-base-content'>
+			<header className='sticky top-0 left-0 z-[1000] h-max w-screen border-b bg-base-100 text-base-content'>
 				<div className='container mx-auto flex h-[8vh] items-center justify-between'>
 					<div className='flex w-full items-center justify-between'>
 						<Img className='h-8 w-16 lg:h-12 lg:w-24' width={512} height={256} src='/emblem.png' alt='Эмблема' />
@@ -119,6 +119,6 @@ export default function Header(): JSX.Element {
 					</div>
 				</div>
 			</header>
-		</div>
+		</>
 	)
 }
