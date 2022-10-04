@@ -100,7 +100,7 @@ export default function Header(): JSX.Element {
 											{l?.label}
 										</PrimaryLink>
 									</label>
-									<div className='dropdown-content w-72 bg-base-100 pt-[26px]' tabIndex={0}>
+									<div className='dropdown-content w-72 bg-base-100 pt-[26px] shadow' tabIndex={0}>
 										{l?.content?.map(c => (
 											<ArrowButtonLink
 												className={
