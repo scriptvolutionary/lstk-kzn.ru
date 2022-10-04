@@ -22,7 +22,7 @@ type NextImageProps = {
 ) &
 	ImageProps
 
-export function Img({ useSkeleton = false, src, width, height, alt, className, imgClassName, blurClassName, ...rest }: NextImageProps): JSX.Element {
+export default function Img({ useSkeleton = false, src, width, height, alt, className, imgClassName, blurClassName, ...rest }: NextImageProps): JSX.Element {
 	const [status, setStatus] = useState(useSkeleton ? 'loading' : 'complete')
 	const widthIsSet: boolean = className?.includes('w-') ?? false
 

@@ -4,7 +4,7 @@ module.exports = {
 	},
 
 	reactStrictMode: true,
-	swcMinify: true
+	swcMinify: false
 
 	// images: {
 	//   domains: [

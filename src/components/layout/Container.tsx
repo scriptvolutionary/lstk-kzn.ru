@@ -1,73 +1,91 @@
+import { NextRouter, useRouter } from 'next/router'
 import { ReactNode } from 'react'
 import { FaEnvelope, FaLocationArrow, FaPhone } from 'react-icons/fa'
 
-import { Img } from '../Img'
-import UnderlineLink from '../links/UnderlineLink'
-import UnderlineModal from '../modals/UnderlineModal'
+import Header from '@/components/layout/Header'
+import ArrowButtonLink from '@/components/links/ArrowButtonLink'
+import ButtonLink from '@/components/links/ButtonLink'
 
 type ContainerProps = {
 	children: ReactNode
 }
 
 export default function Container({ children }: ContainerProps): JSX.Element {
+	const router: NextRouter = useRouter()
 	return (
-		<>
-			<div className='drawer drawer-end'>
-				<input id='my-drawer-4' type='checkbox' className='drawer-toggle' />
-				<div className='drawer-content'>
-					<div className='w-full bg-base-100 text-base-content'>
-						<div className='hidden w-screen bg-primary text-primary-content sm:block'>
-							<div className='container mx-auto flex h-[5vh] items-center justify-between'>
-								<div className='flex w-full items-center justify-between'>
-									<UnderlineModal className='sm:text-sm md:text-base' modalKey='location' variant='primary' icon={<FaLocationArrow />}>
-										г. Казань
-									</UnderlineModal>
-									<div className='flex items-center sm:gap-4 md:gap-8'>
-										<UnderlineLink
-											className='sm:text-sm md:text-base'
-											href='tel:+7 (909) 306-77-79'
-											variant='primary'
-											icon={<FaPhone />}
-											newTab={false}
-										>
-											+7 (909) 306-77-79
-										</UnderlineLink>
-										<UnderlineLink
-											className='sm:text-sm md:text-base'
-											href='mailto:lstk-kzn@mail.ru'
-											variant='primary'
-											icon={<FaEnvelope />}
-											newTab={false}
-										>
-											lstk-kzn@mail.ru
-										</UnderlineLink>
-									</div>
-								</div>
+		<div className='drawer drawer-end'>
+			<input className='drawer-toggle' id='container' type='checkbox' />
+			<div className='drawer-content'>
+				<Header />
+				{children}
+				<footer>footer</footer>
+			</div>
+			<div className='drawer-side'>
+				<label htmlFor='container' className='drawer-overlay'></label>
+				<div className='w-72 overflow-y-auto bg-base-100 p-4 text-base-content'>
+					<ArrowButtonLink
+						className={router.asPath !== '/' ? '' : 'cursor-not-allowed select-none'}
+						variant={router.asPath !== '/' ? 'ghost' : 'primary'}
+						size='block'
+						direction='reverse'
+						href='/'
+					>
+						Компания
+					</ArrowButtonLink>
+					<ArrowButtonLink
+						className={router.asPath !== '/productions' ? '' : 'cursor-not-allowed select-none'}
+						variant={router.asPath !== '/productions' ? 'ghost' : 'primary'}
+						size='block'
+						direction='reverse'
+						href='/productions'
+					>
+						Продукция
+					</ArrowButtonLink>
+					<ArrowButtonLink
+						className={router.asPath !== '/technology' ? '' : 'cursor-not-allowed select-none'}
+						variant={router.asPath !== '/technology' ? 'ghost' : 'primary'}
+						size='block'
+						direction='reverse'
+						href='/productions'
+					>
+						Технология
+					</ArrowButtonLink>
+					<ArrowButtonLink
+						className={router.asPath !== '/gallery' ? '' : 'cursor-not-allowed select-none'}
+						variant={router.asPath !== '/gallery' ? 'ghost' : 'primary'}
+						size='block'
+						direction='reverse'
+						href='/gallery'
+					>
+						Галерея
+					</ArrowButtonLink>
+					<ArrowButtonLink
+						className={router.asPath !== '/contacts' ? '' : 'cursor-not-allowed select-none'}
+						variant={router.asPath !== '/contacts' ? 'ghost' : 'primary'}
+						size='block'
+						direction='reverse'
+						href='/contacts'
+					>
+						Контакты
+					</ArrowButtonLink>
+					<div className='absolute bottom-4 right-0 w-full'>
+						<div className='flex flex-col items-center justify-center gap-4 px-4'>
+							<div className='flex items-center gap-4'>
+								<ButtonLink href='/' variant='ghost'>
+									<FaLocationArrow />
+								</ButtonLink>
+								<ButtonLink href='/' variant='ghost'>
+									<FaPhone />
+								</ButtonLink>
+								<ButtonLink href='/' variant='ghost'>
+									<FaEnvelope />
+								</ButtonLink>
 							</div>
+							<p className='text-sm font-medium'>ООО «СК-ЛСТК Гарант» &copy; 2022</p>
 						</div>
-						<header className='sticky top-0 w-screen bg-base-100 text-base-content'>
-							<div className='container mx-auto flex h-[8vh] items-center justify-between'>
-								<div className='flex w-full items-center justify-between'>
-									<Img width={100} height={50} src='/emblem.png' alt='Эмблема' />
-								</div>
-							</div>
-						</header>
 					</div>
-					{children}
-					<footer>footer</footer>
-				</div>
-				<div className='drawer-side'>
-					<label htmlFor='my-drawer-4' className='drawer-overlay'></label>
-					<ul className='menu w-80 overflow-y-auto bg-base-100 p-4 text-base-content'>
-						<li>
-							<a>Sidebar Item 1</a>
-						</li>
-						<li>
-							<a>Sidebar Item 2</a>
-						</li>
-					</ul>
 				</div>
 			</div>
-		</>
+		</div>
 	)
 }
