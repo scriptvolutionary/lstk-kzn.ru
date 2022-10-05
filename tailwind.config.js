@@ -930,8 +930,8 @@ module.exports = {
 				SLGTheme: {
 					// eslint-disable-next-line @typescript-eslint/no-var-requires
 					...require('daisyui/src/colors/themes')['[data-theme=corporate]'],
-					primary: '#3B6BAB',
-					secondary: '#01BCF9'
+					primary: '#4169e1',
+					secondary: '#2a52be'
 				}
 			}
 		],

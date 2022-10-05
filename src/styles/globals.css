@@ -2,6 +2,10 @@
 @tailwind components;
 
 @layer components {
+	.card.image-full:before {
+		opacity: 0.6;
+	}
+
 	.card.card-parallax {
 		display: grid;
 	}

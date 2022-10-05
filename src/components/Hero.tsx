@@ -4,6 +4,8 @@ import { GrFormDown } from 'react-icons/gr'
 import { ImUser } from 'react-icons/im'
 import Slider from 'react-slick'
 
+import { productions } from '@/data/Productions'
+
 import ArrowUnderlineLink from '@/components/links/ArrowUnderlineLink'
 import ButtonLink from '@/components/links/ButtonLink'
 import ButtonModal from '@/components/modals/ButtonModal'
@@ -61,70 +63,24 @@ export default function Hero({ image, label, content }: HeroProps): JSX.Element 
 						{router.pathname === '/' && (
 							<div className='hidden h-max w-full max-w-[30%] lg:block'>
 								<Slider {...options}>
-									<div>
-										<div className='card image-full w-full'>
-											<figure className='h-44 w-full'>
-												<img className='w-full' src='/productions/sm-forms/preview.png' alt='Малые формы' />
-											</figure>
-											<div className='card-body'>
-												<h2 className='card-title text-base'>Продукция</h2>
-												<p className='text-sm'>Описание</p>
-												<div className='card-actions justify-end'>
-													<ArrowUnderlineLink className='text-sm' href='/' variant='neutral'>
-														Подробнее
-													</ArrowUnderlineLink>
+									{productions?.map(p => (
+										<div className='cursor-pointer' onClick={() => router.push(p?.href)} key={p?.label}>
+											<div className='card image-full w-full'>
+												<figure className='h-44 w-full'>
+													<img className='w-full' src={p?.preview} alt={p?.label} />
+												</figure>
+												<div className='card-body'>
+													<h2 className='card-title text-base'>{p?.label}</h2>
+													<p className='text-sm'>{p?.description}</p>
+													<div className='card-actions justify-end'>
+														<ArrowUnderlineLink className='text-sm' href={p?.href} variant='neutral'>
+															Подробнее
+														</ArrowUnderlineLink>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div>
-										<div className='card image-full w-full'>
-											<figure className='h-44 w-full'>
-												<img className='w-full' src='/productions/sm-forms/preview.png' alt='Малые формы' />
-											</figure>
-											<div className='card-body'>
-												<h2 className='card-title text-base'>Продукция</h2>
-												<p className='text-sm'>Описание</p>
-												<div className='card-actions justify-end'>
-													<ArrowUnderlineLink className='text-sm' href='/' variant='neutral'>
-														Подробнее
-													</ArrowUnderlineLink>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div>
-										<div className='card image-full w-full'>
-											<figure className='h-44 w-full'>
-												<img className='w-full' src='/productions/sm-forms/preview.png' alt='Малые формы' />
-											</figure>
-											<div className='card-body'>
-												<h2 className='card-title text-base'>Продукция</h2>
-												<p className='text-sm'>Описание</p>
-												<div className='card-actions justify-end'>
-													<ArrowUnderlineLink className='text-sm' href='/' variant='neutral'>
-														Подробнее
-													</ArrowUnderlineLink>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div>
-										<div className='card image-full w-full'>
-											<figure className='h-44 w-full'>
-												<img className='w-full' src='/productions/sm-forms/preview.png' alt='Малые формы' />
-											</figure>
-											<div className='card-body'>
-												<h2 className='card-title text-base'>Продукция</h2>
-												<p className='text-sm'>Описание</p>
-												<div className='card-actions justify-end'>
-													<ArrowUnderlineLink className='text-sm' href='/' variant='neutral'>
-														Подробнее
-													</ArrowUnderlineLink>
-												</div>
-											</div>
-										</div>
-									</div>
+									))}
 								</Slider>
 							</div>
 						)}

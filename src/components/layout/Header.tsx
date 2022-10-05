@@ -21,7 +21,7 @@ const headerLinks = [
 		href: '/productions',
 		content: [
 			{ label: 'Малые формы', href: '/productions/small-forms' },
-			{ label: 'Дачные дома', href: '/productions/small-forms' },
+			{ label: 'Дачные дома и здания', href: '/productions/small-forms' },
 			{ label: 'Частные дома', href: '/productions/small-forms' },
 			{ label: 'Жилые многоквартирные дома', href: '/productions/small-forms' },
 			{ label: 'Бизнес объекты', href: '/productions/small-forms' },
@@ -80,7 +80,7 @@ export default function Header(): JSX.Element {
 									{l.label}
 								</PrimaryLink>
 							) : (
-								<div className='dropdown-hover hidden dropdown md:block lg:text-base' key={l?.label}>
+								<div className='dropdown-hover hidden dropdown md:block' key={l?.label}>
 									<label tabIndex={0}>
 										<PrimaryLink
 											className={

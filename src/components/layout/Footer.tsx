@@ -2,20 +2,10 @@ import UnderlineLink from '@/components/links/UnderlineLink'
 
 const footerLinks = [
 	{
-		label: 'Навигация',
-		content: [
-			{ label: 'Компания', href: '/' },
-			{ label: 'Продукция', href: '/productions' },
-			{ label: 'Технологии', href: '/technology' },
-			{ label: 'Галерея', href: '/gallery' },
-			{ label: 'Контакты', href: '/contacts' }
-		]
-	},
-	{
 		label: 'Продукция и проекты',
 		content: [
 			{ label: 'Малые формы', href: '/' },
-			{ label: 'Дачные дома', href: '/productions' },
+			{ label: 'Дачные дома и здания', href: '/productions' },
 			{ label: 'Частные дома', href: '/technology' },
 			{ label: 'Жилые многоквартирные дома', href: '/gallery' },
 			{ label: 'Бизнес объекты', href: '/contacts' },
@@ -28,6 +18,13 @@ const footerLinks = [
 		content: [
 			{ label: 'Строительство', href: '/' },
 			{ label: 'ЛСТК', href: '/' }
+		]
+	},
+	{
+		label: 'Пользователю',
+		content: [
+			{ label: 'Политика конфиденциальности', href: '/' },
+			{ label: 'Условия пользовая', href: '/' }
 		]
 	}
 ]
