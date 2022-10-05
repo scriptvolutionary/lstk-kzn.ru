@@ -10,7 +10,7 @@ import ButtonModal from '@/components/modals/ButtonModal'
 import UnderlineModal from '@/components/modals/UnderlineModal'
 
 const contactLinks = [
-	{ icon: <FaPhone />, label: '+7 (909) 306-77-79', href: 'tel:+7 (909) 306-77-79' },
+	{ icon: <FaPhone />, label: '+7 960 037-53-68', href: 'tel:+7 960 037-53-68' },
 	{ icon: <FaEnvelope />, label: 'lstk-kzn@mail.ru', href: 'mailto:lstk-kzn@mail.ru' }
 ]
 

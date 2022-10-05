@@ -84,7 +84,7 @@ export default function Hero({ image, label, content }: HeroProps): JSX.Element 
 							<p className='pt-4 text-center text-xl font-semibold sm:text-start'>{content}</p>
 							{router.pathname === '/' && (
 								<div className='flex flex-col items-center gap-4 pt-16 sm:flex-row lg:gap-8 lg:pt-32'>
-									<ButtonLink className='justify-between' size='wide' href='tel:+7 960 037-53-68' icon={<ImUser />} variant='outline'>
+									<ButtonLink className='justify-between' size='wide' href='tel:+7 960 037-53-68' newTab={false} icon={<ImUser />} variant='outline'>
 										Консультация
 									</ButtonLink>
 								</div>
