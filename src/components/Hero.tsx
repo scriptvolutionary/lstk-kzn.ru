@@ -1,5 +1,4 @@
 import { NextRouter, useRouter } from 'next/router'
-import { FaCalculator } from 'react-icons/fa'
 import { GrFormDown } from 'react-icons/gr'
 import { ImUser } from 'react-icons/im'
 import Slider from 'react-slick'
@@ -8,7 +7,6 @@ import { productions } from '@/data/Productions'
 
 import ArrowUnderlineLink from '@/components/links/ArrowUnderlineLink'
 import ButtonLink from '@/components/links/ButtonLink'
-import ButtonModal from '@/components/modals/ButtonModal'
 
 type HeroProps = {
 	image: string
@@ -38,6 +36,17 @@ export default function Hero({ image, label, content }: HeroProps): JSX.Element 
 		slidesToScroll: 1
 	}
 
+	const optionsMobile = {
+		dots: true,
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 5000,
+		infinite: true,
+		speed: 600,
+		slidesToShow: 1,
+		slidesToScroll: 1
+	}
+
 	return (
 		<section className='card-parallax overlow-x-hidden card h-[92vh] rounded-none bg-base-100 sm:h-[87vh]'>
 			<figure className='h-full w-screen'>
@@ -45,16 +54,37 @@ export default function Hero({ image, label, content }: HeroProps): JSX.Element 
 			</figure>
 			<div className='container card-body mx-auto p-0'>
 				<div className='flex h-full w-full items-center'>
-					<div className='flex w-full items-center justify-between gap-2'>
+					<div className='flex w-full flex-col items-center justify-between gap-16 lg:flex-row'>
+						{router.pathname === '/' && (
+							<div className='h-max w-full lg:hidden'>
+								<Slider {...optionsMobile}>
+									{productions?.map(p => (
+										<div className='cursor-pointer' onClick={() => router.push(p?.href)} key={p?.label}>
+											<div className='card image-full w-full'>
+												<figure className='h-44 w-full'>
+													<img className='w-full' src={p?.preview} alt={p?.label} />
+												</figure>
+												<div className='card-body'>
+													<h2 className='card-title text-base'>{p?.label}</h2>
+													<p className='text-sm'>{p?.description}</p>
+													<div className='card-actions justify-end'>
+														<ArrowUnderlineLink className='text-sm' href={p?.href} variant='neutral'>
+															Подробнее
+														</ArrowUnderlineLink>
+													</div>
+												</div>
+											</div>
+										</div>
+									))}
+								</Slider>
+							</div>
+						)}
 						<div className='w-full lg:max-w-[70%]'>
 							<h1 className='card-title text-center text-6xl font-extrabold text-primary sm:text-start lg:text-8xl'>{label}</h1>
 							<p className='pt-4 text-center text-xl font-semibold sm:text-start'>{content}</p>
 							{router.pathname === '/' && (
 								<div className='flex flex-col items-center gap-4 pt-16 sm:flex-row lg:gap-8 lg:pt-32'>
-									<ButtonModal className='justify-between' size='wide' modalKey='calculator' icon={<FaCalculator />} variant='accent'>
-										Калькулятор
-									</ButtonModal>
-									<ButtonLink className='justify-between' size='wide' href='/contacts' icon={<ImUser />} variant='outline'>
+									<ButtonLink className='justify-between' size='wide' href='tel:+7 960 037-53-68' icon={<ImUser />} variant='outline'>
 										Консультация
 									</ButtonLink>
 								</div>
