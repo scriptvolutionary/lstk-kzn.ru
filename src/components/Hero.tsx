@@ -117,7 +117,7 @@ export default function Hero({ image, label, content }: HeroProps): JSX.Element 
 					</div>
 				</div>
 				<div className='card-actions mb-4 justify-center'>
-					<ButtonLink className='btn-sm animate-bounce' href='#guid' variant='ghost'>
+					<ButtonLink className='btn-sm animate-bounce' href='#show' variant='ghost'>
 						<GrFormDown />
 					</ButtonLink>
 				</div>

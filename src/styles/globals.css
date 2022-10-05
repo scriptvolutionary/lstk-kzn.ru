@@ -1,4 +1,11 @@
 @tailwind base;
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
 @tailwind components;
 
 @layer components {

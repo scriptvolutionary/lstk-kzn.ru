@@ -65,12 +65,12 @@ export default function Header(): JSX.Element {
 			<header className='sticky top-0 left-0 z-30 w-screen border-b bg-base-100 text-base-content'>
 				<div className='container mx-auto flex h-[8vh] items-center justify-between'>
 					<div className='flex w-full items-center justify-between'>
-						<Img className='h-8 w-24 lg:h-12 lg:w-36' width={360} height={120} src='/emblem.png' alt='Эмблема' />
+						<Img className='h-8 w-24 lg:h-10 lg:w-32' width={320} height={100} src='/emblem.png' alt='Эмблема' />
 						{headerLinks?.map(l =>
 							!l?.content ? (
 								<PrimaryLink
 									className={
-										router.asPath === l?.href
+										router.pathname === l?.href
 											? 'hidden text-sm font-semibold uppercase text-primary hover:text-primary-focus md:inline-flex lg:text-base'
 											: 'hidden text-sm font-semibold uppercase text-base-content hover:text-primary md:inline-flex lg:text-base'
 									}
