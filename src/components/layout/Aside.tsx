@@ -8,9 +8,9 @@ export default function Aside(): JSX.Element {
 	const router: NextRouter = useRouter()
 
 	return (
-		<aside className='drawer-side h-[94vh] lg:h-screen'>
+		<aside className='drawer-side h-[94vh] overflow-y-hidden lg:h-screen'>
 			<label htmlFor='container' className='drawer-overlay'></label>
-			<div className='w-72 overflow-y-auto bg-base-100 p-4 text-base-content'>
+			<div className='w-72 bg-base-100 p-4 text-base-content'>
 				<ArrowButtonLink
 					className={router.asPath !== '/' ? '' : 'cursor-not-allowed select-none'}
 					variant={router.asPath !== '/' ? 'ghost' : 'primary'}
