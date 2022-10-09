@@ -48,7 +48,7 @@ export default function Hero({ image, label, content }: HeroProps): JSX.Element 
 	}
 
 	return (
-		<section className='card-parallax overlow-x-hidden card h-[88vh] rounded-none bg-base-100 sm:h-[87vh]'>
+		<section className='card-parallax overlow-x-hidden card h-[87vh] rounded-none bg-base-100 sm:h-[87vh]'>
 			<figure className='h-full w-screen'>
 				<div className='h-full w-full' style={parallax}></div>
 			</figure>
@@ -79,22 +79,20 @@ export default function Hero({ image, label, content }: HeroProps): JSX.Element 
 								</Slider>
 							</div>
 						)}
-						<div className='w-full lg:max-w-[70%] text-center sm:text-justify'>
-							<h1 className='card-title text-6xl font-extrabold text-primary lg:text-8xl'>{label}</h1>
-							<p className='pt-4 text-xl font-semibold'>{content}</p>
+						<div className='flex w-full items-center text-center sm:items-start sm:text-justify lg:max-w-[70%]'>
+							<h1 className='card-title mb-4 text-6xl font-extrabold text-primary lg:text-8xl'>{label}</h1>
+							<p className='mb-16 text-xl font-semibold lg:mb-32'>{content}</p>
 							{router.pathname === '/' && (
-								<div className='flex flex-col items-center gap-4 pt-16 sm:flex-row lg:gap-8 lg:pt-32'>
-									<ButtonLink
-										className=' justify-between normal-case'
-										size='wide'
-										href='tel:+7 960 037-53-68'
-										newTab={false}
-										icon={<ImUser />}
-										variant='outline'
-									>
-										Консультация
-									</ButtonLink>
-								</div>
+								<ButtonLink
+									className='justify-between normal-case'
+									size='wide'
+									href='tel:+7 960 037-53-68'
+									newTab={false}
+									icon={<ImUser />}
+									variant='outline'
+								>
+									Консультация
+								</ButtonLink>
 							)}
 						</div>
 						{router.pathname === '/' && (
