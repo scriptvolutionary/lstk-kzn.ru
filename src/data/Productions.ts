@@ -1,3 +1,5 @@
+import { garages } from './sm-forms/Garages'
+
 const path = '/productions'
 const prev = 'preview.png'
 const bg = 'background.png'
@@ -9,7 +11,7 @@ export const productions = [
 		description: 'Гаражи, теплицы, террасы, перголы и прочее',
 		preview: `${path}/sm-forms/${prev}`,
 		background: `${path}/sm-forms/${bg}`,
-		content: [{ label: 'Гаражи', subLabel: 'Гаражи по технологии ЛСТК', description: '' }]
+		content: [{ label: 'Гаражи', subLabel: 'Гаражи по технологии ЛСТК', description: '', content: { ...garages } }]
 	},
 	{
 		href: '/productions/country-houses',

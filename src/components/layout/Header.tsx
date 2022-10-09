@@ -18,22 +18,22 @@ const headerLinks = [
 	{ label: 'Компания', href: '/' },
 	{
 		label: 'Продукция',
-		href: '/productions',
+		href: '/small-forms',
 		content: [
-			{ label: 'Малые формы', href: '/productions/small-forms' },
-			{ label: 'Дачные дома и здания', href: '/productions/small-forms' },
-			{ label: 'Частные дома', href: '/productions/small-forms' },
-			{ label: 'Жилые многоквартирные дома', href: '/productions/small-forms' },
-			{ label: 'Бизнес объекты', href: '/productions/small-forms' },
-			{ label: 'Промышленные объекты', href: '/productions/small-forms' },
-			{ label: 'Сельхоз объекты', href: '/productions/small-forms' }
+			{ label: 'Малые формы', href: '/small-forms' },
+			{ label: 'Дачные дома и здания', href: '/contry-houses' },
+			{ label: 'Частные дома', href: '/private-houses' },
+			{ label: 'Жилые многоквартирные дома', href: '/apartment-houses' },
+			{ label: 'Бизнес объекты', href: '/business-objects' },
+			{ label: 'Промышленные объекты', href: '/industiral-objects' },
+			{ label: 'Сельхоз объекты', href: '/agricultural-objects' }
 		]
 	},
 	{
 		label: 'Технология',
-		href: '/technology',
+		href: '/construction',
 		content: [
-			{ label: 'Строительство', href: '/technology' },
+			{ label: 'Строительство', href: '/construction' },
 			{ label: 'ЛСТК', href: '/technology' }
 		]
 	},
