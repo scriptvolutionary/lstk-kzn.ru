@@ -9,7 +9,7 @@ export default function Aside(): JSX.Element {
 	const router: NextRouter = useRouter()
 
 	return (
-		<aside className='drawer-side h-[94vh] overflow-y-hidden lg:h-screen'>
+		<aside className='drawer-side h-[94vh] overflow-y-hidden overlow-x-hidden lg:h-screen'>
 			<label htmlFor='container' className='drawer-overlay'></label>
 			<div className='flex w-72 flex-col gap-4 bg-base-100 p-4 text-base-content'>
 				<ButtonLink
