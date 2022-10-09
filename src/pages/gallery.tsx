@@ -7,7 +7,7 @@ export default function ContactsPage(): JSX.Element {
 	return (
 		<Container>
 			<main className='flex flex-col overflow-x-hidden scroll-smooth'>
-				<Hero image='/background.png' label='Контакты' content='Всегда на связи!' />
+				<Hero image='/background.png' label='Галерея' content='Наши работы всегда документируются!' />
 				<ContactsDataSection />
 				<AdressSection/>
 			</main>
