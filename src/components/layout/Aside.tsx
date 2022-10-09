@@ -14,7 +14,7 @@ export default function Aside(): JSX.Element {
 			<div className='flex w-72 flex-col gap-4 bg-base-100 p-4 text-base-content'>
 				<ButtonLink
 					className={router.asPath !== '/' ? '' : 'cursor-not-allowed select-none'}
-					variant={router.asPath !== '/' ? 'ghost' : 'primary'}
+					variant={router.asPath !== '/' ? 'outline' : 'primary'}
 					size='block'
 					direction='reverse'
 					href='/'
@@ -22,7 +22,23 @@ export default function Aside(): JSX.Element {
 					Компания
 				</ButtonLink>
 				<div className='flex flex-col items-end'>
-					<ButtonModal className='w-64' variant='neutral' size='block' direction='reverse'>
+					<ButtonModal
+						className='w-64'
+						variant={
+							router.asPath ===
+							('/small-forms' ||
+								'/country-houses' ||
+								'/private-houses' ||
+								'/apartment-houses' ||
+								'/business-objects' ||
+								'/industrial-objects' ||
+								'/agricultural-objects')
+								? 'primary'
+								: 'outline'
+						}
+						size='block'
+						direction='reverse'
+					>
 						Продукция
 					</ButtonModal>
 					<ArrowButtonLink
@@ -110,7 +126,13 @@ export default function Aside(): JSX.Element {
 					</ArrowButtonLink>
 				</div>
 				<div className='flex flex-col items-end'>
-					<ButtonModal className='w-64' variant='neutral' size='block' direction='reverse'>
+					<ButtonModal className='w-64' variant={
+							router.asPath ===
+							('/construction' ||
+								'/lstk')
+								? 'primary'
+								: 'outline'
+						} size='block' direction='reverse'>
 						Технология
 					</ButtonModal>
 					<ArrowButtonLink
