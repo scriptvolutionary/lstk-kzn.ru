@@ -48,7 +48,7 @@ export default function Hero({ image, label, content }: HeroProps): JSX.Element 
 	}
 
 	return (
-		<section className='card-parallax overlow-x-hidden card h-[87vh] rounded-none bg-base-100 sm:h-[87vh]'>
+		<section className='card-parallax overlow-x-hidden card h-[86vh] rounded-none bg-base-100 sm:h-[87vh]'>
 			<figure className='h-full w-screen'>
 				<div className='h-full w-full' style={parallax}></div>
 			</figure>
@@ -79,7 +79,7 @@ export default function Hero({ image, label, content }: HeroProps): JSX.Element 
 								</Slider>
 							</div>
 						)}
-						<div className='flex w-full items-center text-center sm:items-start sm:text-justify lg:max-w-[70%]'>
+						<div className='flex w-full flex-col items-center text-center sm:items-start sm:text-justify lg:max-w-[70%]'>
 							<h1 className='card-title mb-4 text-6xl font-extrabold text-primary lg:text-8xl'>{label}</h1>
 							<p className='mb-16 text-xl font-semibold lg:mb-32'>{content}</p>
 							{router.pathname === '/' && (
