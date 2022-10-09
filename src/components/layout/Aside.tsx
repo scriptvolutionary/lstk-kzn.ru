@@ -9,7 +9,7 @@ export default function Aside(): JSX.Element {
 	const router: NextRouter = useRouter()
 
 	return (
-		<aside className='drawer-side h-[94vh] overflow-y-hidden overlow-x-hidden lg:h-screen'>
+		<aside className='overlow-x-hidden drawer-side h-[94vh] overflow-y-hidden lg:h-screen'>
 			<label htmlFor='container' className='drawer-overlay'></label>
 			<div className='flex w-72 flex-col gap-4 bg-base-100 p-4 text-base-content'>
 				<ButtonLink
@@ -46,7 +46,9 @@ export default function Aside(): JSX.Element {
 						direction='reverse'
 						size='block'
 						className={
-							router.asPath !== '/small-forms' ? 'btn-sm text-justify normal-case' : 'cursor-not-allowed select-none text-justify normal-case'
+							router.asPath !== '/small-forms'
+								? 'btn-sm w-60 text-justify normal-case'
+								: 'cursor-not-allowed select-none text-justify normal-case'
 						}
 						variant={router.asPath !== '/small-forms' ? 'ghost' : 'primary'}
 					>
@@ -57,7 +59,9 @@ export default function Aside(): JSX.Element {
 						direction='reverse'
 						size='block'
 						className={
-							router.asPath !== '/country-houses' ? 'btn-sm  text-justify normal-case' : 'cursor-not-allowed select-none text-justify normal-case'
+							router.asPath !== '/country-houses'
+								? 'btn-sm w-60 text-justify normal-case'
+								: 'cursor-not-allowed select-none text-justify normal-case'
 						}
 						variant={router.asPath !== '/country-houses' ? 'ghost' : 'primary'}
 					>
@@ -68,7 +72,9 @@ export default function Aside(): JSX.Element {
 						direction='reverse'
 						size='block'
 						className={
-							router.asPath !== '/private-houses' ? 'btn-sm text-justify normal-case' : 'cursor-not-allowed select-none text-justify normal-case'
+							router.asPath !== '/private-houses'
+								? 'btn-sm w-60 text-justify normal-case'
+								: 'cursor-not-allowed select-none text-justify normal-case'
 						}
 						variant={router.asPath !== '/private-houses' ? 'ghost' : 'primary'}
 					>
@@ -79,7 +85,9 @@ export default function Aside(): JSX.Element {
 						direction='reverse'
 						size='block'
 						className={
-							router.asPath !== '/aparment-houses' ? 'btn-sm text-justify normal-case' : 'cursor-not-allowed select-none text-justify normal-case'
+							router.asPath !== '/aparment-houses'
+								? 'btn-sm w-60 text-justify normal-case'
+								: 'cursor-not-allowed select-none text-justify normal-case'
 						}
 						variant={router.asPath !== '/aparment-houses' ? 'ghost' : 'primary'}
 					>
@@ -91,7 +99,7 @@ export default function Aside(): JSX.Element {
 						size='block'
 						className={
 							router.asPath !== '/business-objects'
-								? 'btn-sm text-justify normal-case'
+								? 'btn-sm w-60 text-justify normal-case'
 								: 'cursor-not-allowed select-none text-justify normal-case'
 						}
 						variant={router.asPath !== '/business-objects' ? 'ghost' : 'primary'}
@@ -104,12 +112,12 @@ export default function Aside(): JSX.Element {
 						size='block'
 						className={
 							router.asPath !== '/industrial-objects'
-								? 'btn-sm text-justify normal-case'
+								? 'btn-sm w-60 text-justify normal-case'
 								: 'cursor-not-allowed select-none text-justify normal-case'
 						}
 						variant={router.asPath !== '/industrial-objects' ? 'ghost' : 'primary'}
 					>
-						Промышленные объекты
+						Промышл. объекты
 					</ArrowButtonLink>
 					<ArrowButtonLink
 						href='/agricultural-objects'
@@ -117,7 +125,7 @@ export default function Aside(): JSX.Element {
 						size='block'
 						className={
 							router.asPath !== '/agricultural-objects'
-								? 'btn-sm text-justify normal-case'
+								? 'btn-sm w-60 text-justify normal-case'
 								: 'cursor-not-allowed select-none text-justify normal-case'
 						}
 						variant={router.asPath !== '/agricultural-objects' ? 'ghost' : 'primary'}
@@ -126,13 +134,12 @@ export default function Aside(): JSX.Element {
 					</ArrowButtonLink>
 				</div>
 				<div className='flex flex-col items-end'>
-					<ButtonModal className='w-64' variant={
-							router.asPath ===
-							('/construction' ||
-								'/lstk')
-								? 'primary'
-								: 'outline'
-						} size='block' direction='reverse'>
+					<ButtonModal
+						className='w-64'
+						variant={router.asPath === ('/construction' || '/lstk') ? 'primary' : 'outline'}
+						size='block'
+						direction='reverse'
+					>
 						Технология
 					</ButtonModal>
 					<ArrowButtonLink
@@ -140,7 +147,9 @@ export default function Aside(): JSX.Element {
 						direction='reverse'
 						size='block'
 						className={
-							router.asPath !== '/construction' ? 'btn-sm text-justify normal-case' : 'cursor-not-allowed select-none text-justify normal-case'
+							router.asPath !== '/construction'
+								? 'btn-sm w-60 text-justify normal-case'
+								: 'cursor-not-allowed select-none text-justify normal-case'
 						}
 						variant={router.asPath !== '/construction' ? 'ghost' : 'primary'}
 					>
@@ -151,7 +160,7 @@ export default function Aside(): JSX.Element {
 						direction='reverse'
 						size='block'
 						className={
-							router.asPath !== '/technology' ? 'btn-sm text-justify normal-case' : 'cursor-not-allowed select-none text-justify normal-case'
+							router.asPath !== '/technology' ? 'btn-sm w-60 text-justify normal-case' : 'cursor-not-allowed select-none text-justify normal-case'
 						}
 						variant={router.asPath !== '/technology' ? 'ghost' : 'primary'}
 					>
