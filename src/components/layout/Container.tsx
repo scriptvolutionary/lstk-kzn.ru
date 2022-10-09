@@ -4,6 +4,8 @@ import Aside from '@/components/layout/Aside'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 
+import FreeSupportButton from './../buttons/FreeSupportButton'
+
 type ContainerProps = {
 	children: ReactNode
 }
@@ -15,6 +17,7 @@ export default function Container({ children }: ContainerProps): JSX.Element {
 			<div className='drawer-content'>
 				<Header />
 				{children}
+				<FreeSupportButton />
 				<Footer />
 			</div>
 			<Aside />

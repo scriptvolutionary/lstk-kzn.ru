@@ -931,8 +931,9 @@ module.exports = {
 					// eslint-disable-next-line @typescript-eslint/no-var-requires
 					...require('daisyui/src/colors/themes')['[data-theme=corporate]'],
 					primary: '#4169e1',
-					secondary: '#3B6BAB',
+					secondary: '#DD2424',
 					'bg-base-100': '#000000',
+					accent: '#DD2424',
 					neutral: '#1E1E1E'
 				}
 			}

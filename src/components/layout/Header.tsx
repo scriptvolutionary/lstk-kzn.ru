@@ -65,7 +65,7 @@ export default function Header(): JSX.Element {
 			<header className='sticky top-0 left-0 z-30 w-screen border-b bg-base-100 text-base-content'>
 				<div className='container mx-auto flex h-[8vh] items-center justify-between'>
 					<div className='flex w-full items-center justify-between'>
-						<Img className='h-8 w-24 lg:h-10 lg:w-32' width={320} height={100} src='/emblem.png' alt='Эмблема' />
+						<Img className='h-10 w-20 lg:h-12 lg:w-24' width={512} height={256} src='/emblem.png' alt='Эмблема' />
 						{headerLinks?.map(l =>
 							!l?.content ? (
 								<PrimaryLink
