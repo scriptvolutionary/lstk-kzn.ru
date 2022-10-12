@@ -15,7 +15,7 @@ export default function Section({ className, label, labelClassName, children, id
 		<section className={clsxMerge('block h-full w-screen bg-base-100 py-24 text-base-content lg:py-32', className)} id={id}>
 			<div className='container mx-auto'>
 				<div className='flex flex-col gap-16'>
-					<h2 className={clsxMerge('text-3xl font-bold', labelClassName)}>{label}</h2>
+					{label && <h2 className={clsxMerge('text-3xl font-bold', labelClassName)}>{label}</h2>}
 					{children}
 				</div>
 			</div>

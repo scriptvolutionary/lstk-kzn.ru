@@ -9,7 +9,7 @@ export default function Aside(): JSX.Element {
 	const router: NextRouter = useRouter()
 
 	return (
-		<aside className='overlow-x-hidden drawer-side h-[94vh] overflow-y-hidden lg:h-screen'>
+		<aside className='drawer-side h-[94vh] overflow-x-hidden overflow-y-hidden lg:h-screen'>
 			<label htmlFor='container' className='drawer-overlay'></label>
 			<div className='flex w-72 flex-col gap-4 bg-base-100 p-4 text-base-content'>
 				<ButtonLink
@@ -133,40 +133,15 @@ export default function Aside(): JSX.Element {
 						Сельхоз объекты
 					</ArrowButtonLink>
 				</div>
-				<div className='flex flex-col items-end'>
-					<ButtonModal
-						className='w-64'
-						variant={router.asPath === ('/construction' || '/lstk') ? 'primary' : 'outline'}
-						size='block'
-						direction='reverse'
-					>
-						Технология
-					</ButtonModal>
-					<ArrowButtonLink
-						href='/construction'
-						direction='reverse'
-						size='block'
-						className={
-							router.asPath !== '/construction'
-								? 'btn-sm w-60 text-justify normal-case'
-								: 'cursor-not-allowed select-none text-justify normal-case'
-						}
-						variant={router.asPath !== '/construction' ? 'ghost' : 'primary'}
-					>
-						Строительство
-					</ArrowButtonLink>
-					<ArrowButtonLink
-						href='/technology'
-						direction='reverse'
-						size='block'
-						className={
-							router.asPath !== '/technology' ? 'btn-sm w-60 text-justify normal-case' : 'cursor-not-allowed select-none text-justify normal-case'
-						}
-						variant={router.asPath !== '/technology' ? 'ghost' : 'primary'}
-					>
-						ЛСТК
-					</ArrowButtonLink>
-				</div>
+				<ButtonLink
+					className={router.asPath !== '/technology' ? '' : 'cursor-not-allowed select-none'}
+					variant={router.asPath !== '/technology' ? 'outline' : 'primary'}
+					size='block'
+					direction='reverse'
+					href='/technology'
+				>
+					Технология
+				</ButtonLink>
 				<ButtonLink
 					className={router.asPath !== '/gallery' ? '' : 'cursor-not-allowed select-none'}
 					variant={router.asPath !== '/gallery' ? 'outline' : 'primary'}

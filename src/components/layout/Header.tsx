@@ -31,11 +31,7 @@ const headerLinks = [
 	},
 	{
 		label: 'Технология',
-		href: '/construction',
-		content: [
-			{ label: 'Строительство', href: '/construction' },
-			{ label: 'ЛСТК', href: '/technology' }
-		]
+		href: '/technology'
 	},
 	{ label: 'Галерея', href: '/gallery' },
 	{ label: 'Контакты', href: '/contacts' }
@@ -46,7 +42,7 @@ export default function Header(): JSX.Element {
 
 	return (
 		<>
-			<div className='hidden w-screen bg-primary text-primary-content sm:block'>
+			<div className='hidden w-screen overflow-x-hidden bg-primary text-primary-content sm:block'>
 				<div className='container mx-auto flex h-[5vh] items-center justify-between'>
 					<div className='flex w-full items-center justify-between'>
 						<UnderlineModal className='text-sm lg:text-base' modalKey='location' variant='primary' icon={<FaLocationArrow />}>
@@ -62,7 +58,7 @@ export default function Header(): JSX.Element {
 					</div>
 				</div>
 			</div>
-			<header className='sticky top-0 left-0 z-30 w-screen border-b bg-base-100 text-base-content'>
+			<header className='sticky top-0 left-0 z-30 w-screen overflow-x-hidden border-b bg-base-100 text-base-content'>
 				<div className='container mx-auto flex h-[8vh] items-center justify-between'>
 					<div className='flex w-full items-center justify-between'>
 						<Img className='h-10 w-20 lg:h-12 lg:w-24' width={512} height={256} src='/emblem.png' alt='Эмблема' />

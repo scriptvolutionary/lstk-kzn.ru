@@ -14,7 +14,7 @@ export default function Container({ children }: ContainerProps): JSX.Element {
 	return (
 		<div className='drawer drawer-end'>
 			<input className='drawer-toggle' id='container' type='checkbox' />
-			<div className='drawer-content'>
+			<div className='drawer-content overflow-x-hidden'>
 				<Header />
 				{children}
 				<FreeSupportButton />

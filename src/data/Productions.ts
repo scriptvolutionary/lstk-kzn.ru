@@ -1,3 +1,7 @@
+import { awnings } from './agr-objects/Awnings'
+import { alcoves } from './ctry-houses/Alcoves'
+import { baths } from './ctry-houses/Baths'
+import { houses } from './ctry-houses/Houses'
 import { garages } from './sm-forms/Garages'
 
 const path = '/productions'
@@ -20,9 +24,9 @@ export const productions = [
 		preview: `${path}/ctry-houses/${prev}`,
 		background: `${path}/ctry-houses/${bg}`,
 		content: [
-			{ label: 'Дачные дома', subLabel: 'Дачные дома по технологии ЛСТК', description: '' },
-			{ label: 'Бани', subLabel: 'Бани по технологии ЛСТК', description: '' },
-			{ label: 'Беседки', subLabel: 'Беседки по технологии ЛСТК', description: '' }
+			{ label: 'Дачные дома', subLabel: 'Дачные дома по технологии ЛСТК', description: '', content: { ...houses } },
+			{ label: 'Бани', subLabel: 'Бани по технологии ЛСТК', description: '', content: { ...baths } },
+			{ label: 'Беседки', subLabel: 'Беседки по технологии ЛСТК', description: '', content: { ...alcoves } }
 		]
 	},
 	{
@@ -70,6 +74,6 @@ export const productions = [
 		description: 'Птичники, коровники, зернохранилища, овощехранилища и другие',
 		preview: `${path}/agr-objects/${prev}`,
 		background: `${path}/agr-objects/${bg}`,
-		content: []
+		content: [{ label: 'Навесы', subLabel: 'Навесы по технологии ЛСТК', description: '', content: { ...awnings } }]
 	}
 ]
