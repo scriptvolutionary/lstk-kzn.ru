@@ -51,7 +51,7 @@ export default function Header(): JSX.Element {
 						>
 							Главная
 						</PrimaryLink>
-						<div className='dropdown-hover dropdown dropdown-open hidden md:inline-block'>
+						<div className='dropdown-hover dropdown hidden md:inline-block'>
 							<label tabIndex={0}>
 								<PrimaryLink
 									className={
