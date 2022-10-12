@@ -1,4 +1,5 @@
 import { Head, Html, Main, NextScript } from 'next/document'
+import Script from 'next/script'
 
 export default function Document(): JSX.Element {
 	return (
@@ -12,6 +13,17 @@ export default function Document(): JSX.Element {
 				/>
 				<link href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css' rel='stylesheet' type='text/css' charSet='UTF-8' />
 				<link href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css' rel='stylesheet' type='text/css' />
+
+				<Script src='https://www.googletagmanager.com/gtag/js?id=G-F6ZYS1S12T' strategy='afterInteractive' />
+				<Script id='google-analytics' strategy='afterInteractive'>
+					{`
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){window.dataLayer.push(arguments);}
+					gtag('js', new Date());
+
+					gtag('config', 'G-F6ZYS1S12T');
+					`}
+				</Script>
 			</Head>
 			<body>
 				<Main />

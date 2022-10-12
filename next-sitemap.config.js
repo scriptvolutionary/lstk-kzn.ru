@@ -1,5 +1,5 @@
 module.exports = {
-	siteUrl: 'https://tsnext-tw.thcl.dev',
+	siteUrl: 'https://lstk-kzn.ru',
 	generateRobotsTxt: true,
 	robotsTxtOptions: {
 		policies: [{ userAgent: '*', allow: '/' }]
