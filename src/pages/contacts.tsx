@@ -5,7 +5,7 @@ import ContactsDataSection from '@/components/sections/contacts/ContactsDataSect
 
 export default function ContactsPage(): JSX.Element {
 	return (
-		<Container>
+		<Container title='Контакты'>
 			<main className='flex flex-col overflow-x-hidden scroll-smooth'>
 				<Hero image='/background.png' label='Контакты' content='Всегда на связи!' />
 				<ContactsDataSection />

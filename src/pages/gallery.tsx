@@ -12,7 +12,7 @@ import Section from '@/components/Section'
 
 export default function ContactsPage(): JSX.Element {
 	return (
-		<Container>
+		<Container title='Контакты'>
 			<main className='flex flex-col overflow-x-hidden scroll-smooth'>
 				<Hero image='/background.png' label='Галерея' content='Наши работы всегда документируются!' />
 				<Section label='' id='show'>

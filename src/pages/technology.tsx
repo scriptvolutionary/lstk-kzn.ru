@@ -4,7 +4,7 @@ import Section from '@/components/Section'
 
 export default function ContactsPage(): JSX.Element {
 	return (
-		<Container>
+		<Container title='Технология'>
 			<main className='flex flex-col overflow-x-hidden scroll-smooth'>
 				<Hero
 					image='/background.png'
