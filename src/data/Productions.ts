@@ -10,7 +10,7 @@ const bg = 'background.png'
 
 export const productions = [
 	{
-		href: '/productions/small-forms',
+		href: '/small-forms',
 		label: 'Малые формы',
 		description: 'Гаражи, теплицы, террасы, перголы и прочее',
 		preview: `${path}/sm-forms/${prev}`,
@@ -18,7 +18,7 @@ export const productions = [
 		content: [{ label: 'Гаражи', subLabel: 'Гаражи по технологии ЛСТК', description: '', content: { ...garages } }]
 	},
 	{
-		href: '/productions/country-houses',
+		href: '/country-houses',
 		label: 'Дачные дома и здания',
 		description: 'Бани, домики для базы отдыха и другие',
 		preview: `${path}/ctry-houses/${prev}`,
@@ -30,7 +30,7 @@ export const productions = [
 		]
 	},
 	{
-		href: '/productions/private-houses',
+		href: '/private-houses',
 		label: 'Частные дома',
 		description: 'Одноэтажные, двухэтажные частные дома и другие',
 		preview: `${path}/priv-houses/${prev}`,
@@ -41,7 +41,7 @@ export const productions = [
 		]
 	},
 	{
-		href: '/productions/apartment-houses',
+		href: '/apartment-houses',
 		label: 'Жилые многоквартирные дома',
 		description: 'Многоквартирные дома, таунхаусы',
 		preview: `${path}/aprtmt-houses/${prev}`,
@@ -49,7 +49,7 @@ export const productions = [
 		content: [{ label: 'Таунхаусы', subLabel: 'Таунхаусы по технологии ЛСТК', description: '' }]
 	},
 	{
-		href: '/productions/business-objects/',
+		href: '/business-objects/',
 		label: 'Бизнес объекты',
 		description: 'Магазины, офисы, автомойки, СТО и другие',
 		preview: `${path}/bus-objects/${prev}`,
@@ -61,7 +61,7 @@ export const productions = [
 		]
 	},
 	{
-		href: '/productions/industrial-objects',
+		href: '/industrial-objects',
 		label: 'Промышленные объекты',
 		description: 'Ангары, цеха, склады и другие',
 		preview: `${path}/indust-objects/${prev}`,
@@ -69,7 +69,7 @@ export const productions = [
 		content: [{ label: 'Ангары', subLabel: 'Ангары по технологии ЛСТК', description: '' }]
 	},
 	{
-		href: '/productions/agricultural-objects',
+		href: '/agricultural-objects',
 		label: 'Сельхоз объекты',
 		description: 'Птичники, коровники, зернохранилища, овощехранилища и другие',
 		preview: `${path}/agr-objects/${prev}`,

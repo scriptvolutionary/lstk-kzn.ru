@@ -1,13 +1,13 @@
 import UnderlineLink from '@/components/links/UnderlineLink'
 
 const footerLinks = [
-	{ label: 'Малые формы', href: '/' },
-	{ label: 'Дачные дома и здания', href: '/productions' },
-	{ label: 'Частные дома', href: '/technology' },
-	{ label: 'Жилые многоквартирные дома', href: '/gallery' },
-	{ label: 'Бизнес объекты', href: '/contacts' },
-	{ label: 'Промышленные объекты', href: '/contacts' },
-	{ label: 'Сельхоз объекты', href: '/contacts' }
+	{ label: 'Малые формы', href: '/small-fomrs' },
+	{ label: 'Дачные дома и здания', href: '/country-houses' },
+	{ label: 'Частные дома', href: '/private-houses' },
+	{ label: 'Жилые многоквартирные дома', href: '/apartment-houses' },
+	{ label: 'Бизнес объекты', href: '/business-objects' },
+	{ label: 'Промышленные объекты', href: '/industrial-objects' },
+	{ label: 'Сельхоз объекты', href: '/agricultural-objects' }
 ]
 
 export default function Footer(): JSX.Element {

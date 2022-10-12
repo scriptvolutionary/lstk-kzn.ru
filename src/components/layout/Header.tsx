@@ -29,10 +29,7 @@ const headerLinks = [
 			{ label: 'Сельхоз объекты', href: '/agricultural-objects' }
 		]
 	},
-	{
-		label: 'Технология',
-		href: '/technology'
-	},
+	{ label: 'Технология', href: '/technology' },
 	{ label: 'Галерея', href: '/gallery' },
 	{ label: 'Контакты', href: '/contacts' }
 ]
