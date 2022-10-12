@@ -14,9 +14,9 @@ export default function Footer(): JSX.Element {
 	return (
 		<footer className='block h-max w-screen bg-neutral text-neutral-content'>
 			<div className='container mx-auto py-8 lg:py-16'>
-				<div className='flex items-center justify-between p-0'>
+				<div className='flex flex-col justify-between gap-4 p-0 xl:flex-row xl:items-center'>
 					{footerLinks?.map(l => (
-						<UnderlineLink className='text-sm lg:text-base' href={l?.href} variant='neutral' key={l?.label}>
+						<UnderlineLink className='max-w-max text-sm xl:text-base' href={l?.href} variant='neutral' key={l?.label}>
 							{l?.label}
 						</UnderlineLink>
 					))}
